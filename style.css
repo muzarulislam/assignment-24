@@ -1,0 +1,142 @@
+body, h1, h2 a{
+    font-family: "League Spartan", sans-serif;
+}
+.navbar{
+    background-color: #e7e6e6;
+}
+.main-menu ul{
+    display: flex;
+}
+.main-menu li{
+    position: relative;
+}
+.main-menu li a{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 0px 10px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.main-menu li a.active{
+    color: #086bfd;
+}
+.main-menu li a:hover{
+    color: #086bfd;
+}
+.main-menu li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -25px;
+    background-color: #086bfd;
+    transition: width 0.5s ease;
+}
+.main-menu li a:hover::after{
+    width: 100%;
+}
+.main-menu li a.active::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -25px;
+    background-color: #086bfd;
+    transition: width 0.5s ease;
+}
+/* DropDown */
+.main-menu li ul.dropdown{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    background-color: #fff;
+    transition: .3s;
+}
+.main-menu li ul.dropdown li{
+    background-color: #086bfd;
+    list-style: none;
+    border: none;
+    top: 25px;
+    display: inline-block;
+}
+.main-menu li ul.dropdown li a{
+    padding: 10px 0 10px 15px;
+    display: inline-block;
+    color: #fff;
+}
+.main-menu li:hover ul.dropdown{
+    display: block;
+}
+.header-btn{
+    display: inline-block;
+    background: #ffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+}
+.header-btn a{
+    color: #086bfd;
+    text-decoration: none;
+    font-weight: bold;
+}
+.header-btn::before{
+    content: "";
+    position: absolute;
+    width:0% ;
+    top: 0;
+    height: 100%;
+    left: 0;
+    background: #086bfd;
+    border-radius: 30px;
+    color: #fff;
+    transition: .5s;
+    z-index: -1;
+}
+.header-btn:hover::before{
+    width: 100%;
+}
+.header-btn a:hover{
+    color: #fff;
+}
+
+/* Banner */
+.banner{
+    background-color: #edf6ff;
+}
+.banner-content{
+    padding-top: 90px;
+}
+.banner-btn{
+    background: #086bfd;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    border: none;
+    transition: .5s;
+    
+}
+.banner-btn:hover{
+    background: #fff;
+    color: #086bfd;
+    border: 1px solid #000;
+}
+.banner-img{
+    margin-top: -30px;
+    margin-right: -50px;
+}
+.bn-img{
+    border-radius: 50%;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
